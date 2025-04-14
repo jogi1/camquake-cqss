@@ -75,6 +75,11 @@ class: player_picker_player = {
   active: class("player_picker_player_active"),
   };
 
+class: cv_clock = {
+  @include("default_font"),
+  color: $color_red,
+  };
+
 class: test_style = {
   @include("default_font"),
   color: $color_red,
