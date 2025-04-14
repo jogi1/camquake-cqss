@@ -1,0 +1,81 @@
+var: color_black = color(#000000);
+var: color_red = color(#FF0000);
+var: color_white = color(#DDDDDD);
+var: color_orange_dark = color(#994400);
+var: color_orange_light = color(#DD8811);
+
+class: root_node = {
+  color: $color_white,
+  background-color: $color_black,
+};
+
+class: default_font = {
+  font: font("font.ttf"),
+  font-size: 40px,
+  };
+
+class: menu_bar = {
+  @include("default_font"),
+  padding: rect(10px),
+  column-gap: 10px,
+};
+
+class: button_base = {
+  @include("default_font"),
+  color: $color_white,
+  border: rect(2px),
+  padding: rect(4px),
+  border-color: $color_orange_dark,
+  hover: class("button_base_hover"),
+};
+
+class: button_base_hover = {
+  color: $color_orange_light,
+};
+
+class: button_pill = {
+  border-radius: rect(100px),
+};
+
+class: button_half_top = {
+  border-radius: rect(100px, none),
+  border: rect(2px, 2px, 2px, 0px),
+};
+
+class: menu_bar_button = {
+  @include("button_base"),
+  @include("button_pill"),
+  };
+
+class: control_view_button = {
+  @include("button_base"),
+  @include("button_half_top"),
+  };
+
+class: control_view_bar = {
+  padding: rect(8px, 8px, 8px, 0px),
+  border: rect(0px, 0px, 0px, 4px),
+  border-color: $color_orange_dark,
+  };
+
+class: player_picker_player_active = {
+  color: $color_orange_light,
+};
+
+class: player_picker_player_hover = {
+  color: $color_orange_dark,
+  border-color: $color_red,
+};
+
+class: player_picker_player = {
+  color: $color_white,
+  border: rect(2px),
+  border-color: $color_orange_dark,
+  hover: class("player_picker_player_hover"),
+  active: class("player_picker_player_active"),
+  };
+
+class: test_style = {
+  @include("default_font"),
+  color: $color_red,
+  };
