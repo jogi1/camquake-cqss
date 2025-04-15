@@ -11,7 +11,7 @@ class: root_node = {
 };
 
 class: default_font = {
-  font: font("font.ttf"),
+  font: font("fonts/0xProtoNerdFontMono-Regular.ttf"),
   font-size: 40px,
   };
 
@@ -75,6 +75,7 @@ class: player_picker_player_hover = {
 };
 
 class: player_picker_player = {
+  @include("default_font"),
   color: $color_white,
   border: rect(2px),
   border-color: $color_orange_dark,
@@ -83,7 +84,8 @@ class: player_picker_player = {
   };
 
 class: cv_clock = {
-  @include("default_font"),
+  font: font("fonts/DepartureMonoNerdFontMono-Regular.otf"),
+  font-size: 40px,
   color: $color_red,
   };
 
