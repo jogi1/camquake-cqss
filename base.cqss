@@ -3,7 +3,7 @@ var: color_red = color(#FF0000);
 var: color_white = color(#DDDDDD);
 var: color_orange_dark = color(#994400);
 var: color_orange_light = color(#DD8811);
-var: color_green = color(#44AA44);
+var: color_blue = color(#0000FF);
 
 class: root_node = {
   color: $color_white,
@@ -39,8 +39,8 @@ class: button_pill = {
 };
 
 class: button_half_top = {
-  border-radius: rect(100px, none),
-  border: rect(2px, 2px, 2px, 0px),
+  border-radius: rect(100px, 100px, none, none),
+  border: rect(2px, 2px, 0px, 2px),
 };
 
 class: menu_bar_button = {
@@ -48,19 +48,25 @@ class: menu_bar_button = {
   @include("button_pill"),
   };
 
+class: control_view_button_active = {
+  color: $color_blue,
+  };
+
+
 class: control_view_button = {
   @include("button_base"),
   @include("button_half_top"),
+  active: class("control_view_button_active"),
   };
 
 class: control_view_bar = {
-  padding: rect(8px, 8px, 8px, 0px),
-  border: rect(0px, 0px, 0px, 4px),
+  padding: rect(8px, 8px, 0px, 8px),
+  border: rect(0px, 0px, 4px, 0px),
   border-color: $color_orange_dark,
   };
 
 class: player_picker_player_active = {
-  color: $color_green,
+  color: $color_blue,
 };
 
 class: player_picker_player_hover = {
