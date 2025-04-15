@@ -3,6 +3,7 @@ var: color_red = color(#FF0000);
 var: color_white = color(#DDDDDD);
 var: color_orange_dark = color(#994400);
 var: color_orange_light = color(#DD8811);
+var: color_green = color(#44AA44);
 
 class: root_node = {
   color: $color_white,
@@ -59,7 +60,7 @@ class: control_view_bar = {
   };
 
 class: player_picker_player_active = {
-  color: $color_orange_light,
+  color: $color_green,
 };
 
 class: player_picker_player_hover = {
